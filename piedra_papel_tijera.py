@@ -6,6 +6,7 @@ opciones = ["piedra", "papel", "tijera"]
 
 victorias = 0
 derrotas = 0
+empates = 0
 
 while True:
     jugador = input("\nElige piedra, papel o tijera: ").lower()
@@ -20,6 +21,7 @@ while True:
 
     if jugador == computadora:
         print("🤝 ¡Empate!")
+        empates += 1
 
     elif (
         (jugador == "piedra" and computadora == "tijera")
@@ -33,7 +35,7 @@ while True:
         print("😢 ¡Perdiste!")
         derrotas += 1
 
-    print(f"🏆 Victorias: {victorias} | Derrotas: {derrotas}")
+    print(f"🏆 Victorias: {victorias} | Derrotas: {derrotas} | Empates: {empates}")
 
     continuar = input("\n¿Quieres jugar otra vez? (si/no): ").lower()
 
